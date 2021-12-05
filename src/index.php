@@ -3,11 +3,6 @@
 //exit;
 //xdebug_info();
 //exit;
-
-/************************/
-/*  If the debugger won't work try rebuild php, docker compose up -d --no-deps --build php
-/************************/
-
 ?>
 
 <!DOCTYPE html>
