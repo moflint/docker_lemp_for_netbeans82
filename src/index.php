@@ -1,10 +1,13 @@
 <?php
-//phpinfo();
-//exit;
-//xdebug_info();
-//exit;
-?>
 
+//https://tech.osteel.me/posts/docker-for-local-web-development-part-1-a-basic-lemp-stack
+
+/*
+phpinfo();
+xdebug_info();
+exit;
+*/ 
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -27,10 +30,8 @@
     <body>
         <img src="https://tech.osteel.me/images/2020/03/04/hello.gif" alt="Hello there" class="center">
         <?php
+		
 		//xdebug_break();
-		$x=1;
-		$y=2;
-		//exit;
 		
         $connection = new PDO('mysql:host=mysql;dbname=demo;charset=utf8', 'root', 'root');
         $query      = $connection->query("SELECT TABLE_NAME FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'demo'");

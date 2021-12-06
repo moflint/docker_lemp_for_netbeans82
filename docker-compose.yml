@@ -34,8 +34,9 @@ services:
       MYSQL_DATABASE: demo
     volumes:
       - ./.docker/mysql/my.cnf:/etc/mysql/conf.d/my.cnf
-      #- mysqldata:/var/lib/mysql  use this line in conjunction with the Volumes Service 
-      #  if you want docker to handle the storage location, else create directory mysql_data to store mysql with project
+    # Uncomment the next line in conjunction with the Volumes Service if you want docker handle the mysql storage
+    # - mysqldata:/var/lib/mysql   
+    # Else create the directory 'mysql_data' to store mysql with your project
       - ./mysql_data:/var/lib/mysql
     healthcheck:
       test: mysqladmin ping -h 127.0.0.1 -u root --password=$$MYSQL_ROOT_PASSWORD
@@ -54,6 +55,7 @@ services:
         condition: service_healthy
 
 # Volumes Service
+# Uncomment the next 2 lines if you are letting docker handle the mysql storage
 #volumes:
 #  mysqldata:
 
