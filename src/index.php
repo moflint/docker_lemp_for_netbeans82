@@ -6,7 +6,7 @@
 phpinfo();
 xdebug_info();
 exit;
-*/ 
+*/
 ?>
 <!DOCTYPE html>
 <html>
